@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+//declaração de tipos para interface das VMs
 interface VirtualMachines {
   displayName: string;
   cpu: number;
@@ -20,12 +21,15 @@ export class PainelComponent {
     this.router.navigate(['/cadastro']);
   }
 
+  //Array de objetos das VMs
   virtualmachines:VirtualMachines[] = [
     { displayName: 'vm1', cpu: 2, memory: 1024, status: "RUNNING" },
     { displayName: 'vm2', cpu: 1, memory: 512, status: "PAUSED" },
     { displayName: 'vm3', cpu: 4, memory: 2048, status: "STOP" }
   ];
 
+
+  //lógica para mudança de status das VMs
   startVm(vm: VirtualMachines) {
     if (vm.status === 'PAUSED' || vm.status === 'STOP') {
       vm.status = 'RUNNING';
@@ -53,7 +57,7 @@ export class PainelComponent {
   }
 
   showMessage(message: string) {
-    alert(message); // Você pode substituir isso por uma mensagem mais sofisticada, se desejar.
+    alert(message);
   }
 
 }

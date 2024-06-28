@@ -1,9 +1,11 @@
 <div class="list-container">
-  <div class="header">
-    <h1>Lista de Máquinas Virtuais</h1>
-    <button class="btn btn-primary" (click)="cadastarVM()">
-      Cadastrar nova Máquina Virtual
-    </button>
+  <div class="list-content">
+    <div class="title">
+      <h1>Lista de Máquinas Virtuais</h1>
+      <button class="btn btn-primary" (click)="cadastarVM()">
+        Cadastrar nova Máquina Virtual
+      </button>
+    </div>
 
     <table class="table">
       <thead>
@@ -15,7 +17,6 @@
           <th>Ações</th>
         </tr>
       </thead>
-      ten
       <tbody>
         <tr *ngFor="let vm of virtualmachines">
           <td>{{ vm.displayName }}</td>
