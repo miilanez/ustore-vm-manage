@@ -4,5 +4,39 @@
     <button class="btn btn-primary" (click)="cadastarVM()">
       Cadastrar nova Máquina Virtual
     </button>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPU</th>
+          <th>Memória (RAM)</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vm of virtualmachines">
+          <td>{{ vm.displayName }}</td>
+          <td>{{ vm.cpu }}</td>
+          <td>{{ vm.memory }} MB</td>
+          <td>{{ vm.status }}</td>
+          <td>
+            <button type="submit" class="btn btn-primary" value="Iniciar">
+              Iniciar VM
+            </button>
+            <button type="submit" class="btn btn-primary" value="Pausar">
+              Pausar VM
+            </button>
+            <button type="submit" class="btn btn-primary" value="Parar">
+              Parar VM
+            </button>
+            <button type="submit" class="btn btn-secondary" value="Excluir">
+              Excluir
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
