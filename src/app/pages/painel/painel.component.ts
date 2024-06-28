@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-painel',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class PainelComponent {
 
+  constructor(private router: Router) {}
+  cadastarVM() {
+    this.router.navigate(['/cadastro']);
+  }
 }
