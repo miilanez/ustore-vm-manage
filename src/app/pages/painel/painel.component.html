@@ -15,6 +15,7 @@
           <th>Ações</th>
         </tr>
       </thead>
+      ten
       <tbody>
         <tr *ngFor="let vm of virtualmachines">
           <td>{{ vm.displayName }}</td>
@@ -22,16 +23,16 @@
           <td>{{ vm.memory }} MB</td>
           <td>{{ vm.status }}</td>
           <td>
-            <button type="submit" class="btn btn-primary" value="Iniciar">
+            <button (click)="startVm(vm)" class="btn btn-primary">
               Iniciar VM
             </button>
-            <button type="submit" class="btn btn-primary" value="Pausar">
+            <button (click)="pauseVm(vm)" class="btn btn-primary">
               Pausar VM
             </button>
-            <button type="submit" class="btn btn-primary" value="Parar">
+            <button (click)="stopVm(vm)" class="btn btn-primary">
               Parar VM
             </button>
-            <button type="submit" class="btn btn-secondary" value="Excluir">
+            <button (click)="deleteVm(vm)" class="btn btn-secondary">
               Excluir
             </button>
           </td>
