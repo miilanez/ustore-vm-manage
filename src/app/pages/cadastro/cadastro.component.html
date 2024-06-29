@@ -1,1 +1,71 @@
-<p>cadastro works!</p>
+<div class="cadastro-container">
+  <button class="btn btn-secondary" (click)="navigateToPainel()">Voltar</button>
+
+  <h2>Cadastrar Máquina Virtual</h2>
+
+  <form (ngSubmit)="onSubmit()" #vmForm="ngForm">
+    <div class="form-group">
+      <label for="displayName">Nome</label>
+      <input
+        type="text"
+        id="displayName"
+        name="displayName"
+        class="form-control"
+        required
+        minlength="5"
+        [(ngModel)]="vm.displayName"
+        #displayName="ngModel"
+      />
+      <div
+        *ngIf="
+          displayName.invalid && (displayName.dirty || displayName.touched)
+        "
+        class="alert alert-danger"
+      >
+        O nome deve ter no mínimo 5 caracteres.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="memory">Memória (MB)</label>
+      <input
+        type="number"
+        id="memory"
+        name="memory"
+        class="form-control"
+        required
+        [(ngModel)]="vm.memory"
+        #memory="ngModel"
+      />
+      <div
+        *ngIf="memory.invalid && (memory.dirty || memory.touched)"
+        class="alert alert-danger"
+      >
+        Memória é obrigatória.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cpu">Tamanho da CPU</label>
+      <input
+        type="number"
+        id="cpu"
+        name="cpu"
+        class="form-control"
+        required
+        [(ngModel)]="vm.cpu"
+        #cpu="ngModel"
+      />
+      <div
+        *ngIf="cpu.invalid && (cpu.dirty || cpu.touched)"
+        class="alert alert-danger"
+      >
+        CPU é obrigatória e deve ser um número inteiro.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="vmForm.invalid">
+      Cadastrar
+    </button>
+  </form>
+</div>
