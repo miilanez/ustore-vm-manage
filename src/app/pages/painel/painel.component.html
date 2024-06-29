@@ -1,1 +1,44 @@
-<p>painel works!</p>
+<div class="list-container">
+  <div class="list-content">
+    <div class="title">
+      <h1>Lista de Máquinas Virtuais</h1>
+      <button class="btn btn-primary" (click)="cadastarVM()">
+        Cadastrar nova Máquina Virtual
+      </button>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPU</th>
+          <th>Memória (RAM)</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vm of virtualmachines">
+          <td>{{ vm.displayName }}</td>
+          <td>{{ vm.cpu }}</td>
+          <td>{{ vm.memory }} MB</td>
+          <td>{{ vm.status }}</td>
+          <td>
+            <button (click)="startVm(vm)" class="btn btn-primary">
+              Iniciar VM
+            </button>
+            <button (click)="pauseVm(vm)" class="btn btn-primary">
+              Pausar VM
+            </button>
+            <button (click)="stopVm(vm)" class="btn btn-primary">
+              Parar VM
+            </button>
+            <button (click)="deleteVm(vm)" class="btn btn-secondary">
+              Excluir
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
