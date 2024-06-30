@@ -32,7 +32,7 @@ Este projeto tem como objetivo desenvolver uma interface web em Angular para a g
 
 ## Decisões de Design
 
-- **Interface**: Optei por uma interface mais minimalista com foco nas funcionalidades da aplicação, privilegiando as cores claras, o azul e laranja, baseados na logo da Ustore;
+- **Interface**: Optei por uma interface mais minimalista com foco nas funcionalidades da aplicação, privilegiando as cores claras, o azul e laranja, baseados na logo da Ustore.
 - **Validação de Formulários**: Utilizei as validações embutidas do Angular para garantir que os dados inseridos nos formulários são válidos.
 - **Armazenamento**: Utilizei o LocalStorage para armazenar e recuperar as informações das VMs.
 - **Estilização**: CSS/SCSS foi utilizado para estilizar a interface, garantindo um design limpo e responsivo.
@@ -46,14 +46,14 @@ Este projeto tem como objetivo desenvolver uma interface web em Angular para a g
 
 ## Dificuldades Encontradas
 
-- **Conhecimento da linguagem**: Precisei de mais tempo para entender como funciona a estrutura do Angular, assim como os seus processos de configuração.
-- **Versão do Angular**: Mesmo dentro da versão 17, houveram atualizões recentes em que o Angular passou a utilizar componentes standalone, modificando também outros arquivos da estrutura básica da linguagem como modulos e rotas. Isso trouxe maior dificuldade para entender como declarar dependências e tornar os componentes funcionais.
+- **Conhecimento da Linguagem**: Precisei de mais tempo para entender como funciona a estrutura do Angular, assim como os seus processos de configuração.
+- **Versão do Angular**: Mesmo dentro da versão 17, houveram atualizações recentes em que o Angular passou a utilizar componentes standalone, modificando também outros arquivos da estrutura básica da linguagem como módulos e rotas. Isso trouxe maior dificuldade para entender como declarar dependências e tornar os componentes funcionais.
 - **Validação de Formulários**: A configuração das validações para garantir a correta inserção dos dados nos formulários foi um desafio inicial.
 - **Manipulação de Estados**: Gerenciar os diferentes estados das VMs (RUNNING, PAUSED, STOP) e as transições entre eles foi complexo, especialmente na interface de listagem, pois não encontrei pacotes de gerenciamento de estados como o "useState" do React. Para isso, busquei bibliotecas externas como o "NGRX", mas optei por utilizar soluções mais simples embutidas do Angular.
 
 ## Configuração e Execução
 
-### 1. Clone o repositório:
+### 1. Clone o Repositório:
 
 ```bash
 git clone https://github.com/miilanez/ustore-vm-manage.git
@@ -71,4 +71,7 @@ ng serve
 
 ## Live Demo
 
-Também disponibilizei a aplicação em live demo na plataforma Vercel:
+Também disponibilizei a aplicação em live demo na plataforma Vercel e pode ser acessada através do link:
+[live demo](http://ustore-vm-manage.vercel.app)
+
+Desenvolvido por Gabriel Milanez
