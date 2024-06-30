@@ -111,7 +111,7 @@
 
       .chart-bar, .chart-pie {
         canvas {
-          height: 270px !important;
+          height: 269px !important;
         }
       }
     }
