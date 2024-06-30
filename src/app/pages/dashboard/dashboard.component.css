@@ -1,8 +1,11 @@
 .dashboard-container {
   padding: 1rem;
 
-  .title {
-    text-align: center;
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
   }
 
   .welcome-message {
@@ -20,27 +23,34 @@
 
   .charts {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    .chart-bar, .chart-pie {
-      width: 30%;
-      margin-bottom: 2rem;
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fcfafa;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
 
-      h2 {
+    .chart-bar, .chart-pie {
+      p {
         text-align: center;
         margin-bottom: 1rem;
       }
 
       canvas {
         width: 100% !important;
-        height: 300px !important;
+        height: 250px !important;
       }
     }
   }
 
   .actions {
-    margin-top: 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
