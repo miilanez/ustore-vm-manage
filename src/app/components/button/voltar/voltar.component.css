@@ -1,0 +1,13 @@
+.btn-action {
+  margin-right: 10px;
+  background-color: #e79f3f;
+  border: none;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e67d1c;
+  }
+    }

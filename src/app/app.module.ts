@@ -11,7 +11,8 @@ import { PainelComponent } from './pages/painel/painel.component';
 
 import { appRoutes } from './app.routes';
 import { NavComponent } from './components/nav/nav.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { VoltarComponent } from './components/button/voltar/voltar.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,13 @@ import { FooterComponent } from './components/footer/footer.component';
     CadastroComponent,
     PainelComponent,
     NavComponent,
-    FooterComponent
+    VoltarComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

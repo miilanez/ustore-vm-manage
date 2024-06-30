@@ -6,6 +6,12 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 2rem;
+
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   .welcome-message {
@@ -49,13 +55,6 @@
     }
   }
 
-  .actions {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-
   .btn-primary {
     background-color: #007bff;
     border: none;
@@ -89,10 +88,6 @@
       }
     }
 
-    .actions {
-      padding: 1rem;
-    }
-
     .btn-primary {
       padding: 0.4rem 0.8rem;
     }
@@ -114,10 +109,6 @@
           height: 269px !important;
         }
       }
-    }
-
-    .actions {
-      padding: 2.5rem;
     }
 
     .btn-primary {
