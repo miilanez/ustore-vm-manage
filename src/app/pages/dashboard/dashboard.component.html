@@ -1,8 +1,17 @@
 <div class="dashboard-container">
+  <div class="nav">
+    <div class="navigation">
+      <voltar-button></voltar-button>
+      <h1>Dashboard</h1>
+    </div>
+    <button class="btn btn-primary" (click)="visualizarVms()">
+      Visualizar Máquinas Virtuais
+    </button>
+  </div>
+
   <div class="dashboard-content">
-    <h2 class="title">Dashboard</h2>
     <div class="welcome-message">
-      <h1>Bem-vindo ao Portal de Gestão de Máquinas Virtuais</h1>
+      <h2>Bem-vindo ao Portal de Gestão de Máquinas Virtuais</h2>
       <p>
         Este portal permite monitorar e gerenciar as suas máquinas virtuais de
         forma eficiente e prática.
@@ -10,20 +19,18 @@
     </div>
 
     <div class="charts">
-      <div class="chart-bar">
-        <h2>Status das Máquinas Virtuais</h2>
-        <canvas id="barChart"></canvas>
+      <div class="chart-container">
+        <div class="chart-bar">
+          <p>Status das Máquinas Virtuais</p>
+          <canvas id="barChart"></canvas>
+        </div>
       </div>
-
-      <div class="chart-pie">
-        <h2>Uso de Máquinas Virtuais</h2>
-        <canvas id="pieChart"></canvas>
+      <div class="chart-container">
+        <div class="chart-pie">
+          <p>Uso de Máquinas Virtuais</p>
+          <canvas id="pieChart"></canvas>
+        </div>
       </div>
-    </div>
-
-    <div class="actions">
-      <button class="btn btn-primary" (click)="cadastrarVms()">Adicionar Máquina Virtual</button>
-      <button class="btn btn-primary" (click)="visualizarVms()">Visualizar Máquinas Virtuais</button>
     </div>
   </div>
 </div>

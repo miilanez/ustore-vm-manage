@@ -1,8 +1,17 @@
 .dashboard-container {
-  padding: 2rem;
+  padding: 1rem;
 
-  .title {
-    text-align: center;
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   .welcome-message {
@@ -20,30 +29,30 @@
 
   .charts {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    .chart-bar, .chart-pie {
-      width: 30%;
-      margin-bottom: 2rem;
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fcfafa;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
 
-      h2 {
+    .chart-bar, .chart-pie {
+      p {
         text-align: center;
         margin-bottom: 1rem;
       }
 
       canvas {
         width: 100% !important;
-        height: 300px !important;
+        height: 250px !important;
       }
     }
-  }
-
-  .actions {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
   }
 
   .btn-primary {
@@ -56,6 +65,54 @@
 
     &:hover {
       background-color: #0069d9;
+    }
+  }
+}
+
+/* Media queries for responsiveness */
+
+/* Tablet (768px a 1280px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .dashboard-container {
+    padding: 0.5rem;
+
+    .charts {
+      .chart-container {
+        padding: 0.5rem;
+      }
+
+      .chart-bar, .chart-pie {
+        canvas {
+          height: 200px !important;
+        }
+      }
+    }
+
+    .btn-primary {
+      padding: 0.4rem 0.8rem;
+    }
+  }
+}
+
+/* Desktop/Notebook (1280px a 1920px) */
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .dashboard-container {
+    padding: 1.5rem;
+
+    .charts {
+      .chart-container {
+        padding: 1.5rem;
+      }
+
+      .chart-bar, .chart-pie {
+        canvas {
+          height: 269px !important;
+        }
+      }
+    }
+
+    .btn-primary {
+      padding: 0.6rem 1.2rem;
     }
   }
 }

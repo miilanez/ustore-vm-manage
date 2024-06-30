@@ -15,6 +15,7 @@ interface VirtualMachines {
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
+
   constructor(private router: Router) {}
 
   //carregar charts
@@ -44,7 +45,6 @@ export class DashboardComponent implements OnInit {
   //chart de vms em execução
 
   loadBarChart() {
-
     //funções para identificar status das vms em execução
     const vms = this.getVirtualMachines();
     const vmsAtivas = this.countStatus(vms, 'RUNNING');
@@ -115,5 +115,9 @@ export class DashboardComponent implements OnInit {
         responsive: true,
       },
     });
+  }
+
+  voltar() {
+    this.router.navigate(['/login']);
   }
 }
