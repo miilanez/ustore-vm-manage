@@ -26,7 +26,7 @@ Este projeto tem como objetivo desenvolver uma interface web em Angular para a g
 
 - **Botão de voltar**: Retorna para a tela de listagem de máquinas virtuais.
 - **Campo de nome**: Campo de texto obrigatório com no mínimo 5 caracteres.
-- **Campo de memória**: Campo numérico obrigatório, exibido em GB.
+- **Campo de memória**: Campo numérico obrigatório, exibido em MB.
 - **Campo de tamanho da CPU**: Campo numérico obrigatório, aceita apenas números inteiros.
 - **Botão de cadastrar**: Insere uma nova VM no array, salva no LocalStorage e define o status como RUNNING.
 
