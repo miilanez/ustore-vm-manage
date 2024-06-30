@@ -24,7 +24,7 @@ export class CadastroComponent {
 
   constructor(private router: Router) {}
 
-  navigateToPainel() {
+  cancelar() {
     this.router.navigate(['/painel']);
   }
 
